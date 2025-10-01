@@ -5,6 +5,10 @@ on:
   push:
     branches: [main]
 
+env:
+  BUCKET_NAME: postech-fiap-fastfood-backend-eks-lino #TODO trocar o nome do bucket
+  AWS_REGION: us-east-1
+
 jobs:
   plan:
     name: Terraform plan
@@ -17,7 +21,13 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID}}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-session-token: ${{ secrets.AWS_SESSION_TOKEN }}
-          aws-region: us-east-1
+          aws-region: env.AWS_REGION
+
+      - name: Create S3 Backend Bucket if it doesn't exist
+        id: create-bucket
+        run: |
+          aws s3 mb s3://${{ env.BUCKET_NAME }} --region env.AWS_REGION || true
+
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v2
         with:
