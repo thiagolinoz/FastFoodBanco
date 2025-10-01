@@ -6,7 +6,7 @@ on:
     branches: [main]
 
 env:
-  BUCKET_NAME: postech-fiap-fastfood-backend-eks-lino #TODO trocar o nome do bucket
+  BUCKET_NAME: postech-fiap-fastfood-backend-banco-lino #TODO trocar o nome do bucket
   AWS_REGION: us-east-1
 
 jobs:
