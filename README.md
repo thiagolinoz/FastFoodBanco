@@ -8,7 +8,7 @@
  - Spring boot
  - Swagger
  - Python
- - Terrafom
+ - Terraform
 
 ## Pipeline de Deploy
 
