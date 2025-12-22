@@ -12,7 +12,7 @@ variable "cidr_block_vpc" {
 
 variable "tags" {
   default = {
-    Name = "fastfood-3"
+    Name = "fastfood-4"
   }
 }
 
