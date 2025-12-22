@@ -3,10 +3,18 @@
 ## Stacks utilizadas:
  - Docker
  - Docker-compose
- - Banco de dados - MariaDB
+ - Banco de dados - MySQL Aurora
  - Migration de dados - Flyway
  - Spring boot
  - Swagger
+ - Python
+ - Terraform
+
+## Pipeline de Deploy
+
+Para utilizar a pipeline é preciso adicionar ao GitHub Secrets as variaveis necessárias da conta AWS que se pretende realizar a criação das infraestruturas. 
+O terraform contendo o código para criação da infraestrura do banco de dados MySQL Aurora AWS para hospedar o banco da aplicação. 
+O trigger do github action é o push no repositório main, porém pode ser realizado ao entrar Action e executar o último job.
 
 ## Ambiente de Desenvolvimento:
 
@@ -212,6 +220,4 @@ Endpoint: Post /webhook/mercado-pago/pagamentos/{nrPedido}
 ## Desenho de Arquitetura
 O arquido do desenho de arquitetura econtra-se na pasta ./arquitetura/arquitetura fase 2.drawio
 
-## Vídeo 
-📹 https://youtu.be/2YXLZocAqf4
 
