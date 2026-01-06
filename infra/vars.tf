@@ -17,6 +17,6 @@ variable "tags" {
 }
 
 variable "role_lab" {
-  default = "arn:aws:iam::318969550207:role/LabRole"
+  default = "arn:aws:iam::494556609597:role/LabRole"
 
 }
